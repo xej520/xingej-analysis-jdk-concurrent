@@ -125,6 +125,9 @@ package java.util.concurrent;
  * @since 1.5
  * @author Doug Lea
  */
+//Executor 可以认为是一个任务执行器
+//核心思想是 执行
+// 接口，仅仅定义的是操作行为
 public interface Executor {
 
     /**
@@ -137,5 +140,21 @@ public interface Executor {
      * accepted for execution.
      * @throws NullPointerException if command is null
      */
+//    重点是执行，不是创建
+//    Executor没有严格要求任务的执行是同步还是异步，这个是由实现者自己决定的
+    //举例
+    //同步
+//    class DirectExecutor implements Executor {
+//        public void execute(Runnable r) {
+//            r.run();
+//        }
+//    }
+
+    //新开线程执行, 异步执行
+//    class ThreadPerTaskExecutor implements Executor {
+//        public void execute(Runnable r) {
+//            new Thread(r).start();
+//        }
+//    }
     void execute(Runnable command);
 }

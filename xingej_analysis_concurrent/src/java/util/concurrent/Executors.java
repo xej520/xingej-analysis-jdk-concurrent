@@ -68,6 +68,7 @@ import sun.security.util.SecurityConstants;
  * @since 1.5
  * @author Doug Lea
  */
+//为Executor提供了一些工厂和工具方法来创建不同的任务执行器
 public class Executors {
 
     /**

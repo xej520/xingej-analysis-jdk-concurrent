@@ -93,6 +93,7 @@ package java.util.concurrent;
  * @author Doug Lea
  * @param <V> The result type returned by this Future's <tt>get</tt> method
  */
+//Future代表了异步计算的结果
 public interface Future<V> {
 
     /**

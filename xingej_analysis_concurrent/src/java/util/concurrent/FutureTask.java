@@ -90,6 +90,7 @@ public class FutureTask<V> implements RunnableFuture<V> {
      * NEW -> INTERRUPTING -> INTERRUPTED
      */
     private volatile int state;
+    //定义一些静态的常量 来表示 不同的状态，从0开始的
     private static final int NEW          = 0;
     private static final int COMPLETING   = 1;
     private static final int NORMAL       = 2;
